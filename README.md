@@ -3,10 +3,10 @@ Laravelの開発環境が立ち上げられます。
 
 ## version
 ```
-PHP 7.4.7
-Laravel Framework 7.19.0
-Node v12.14.1
-npm  6.13.4
+PHP     7.4.7
+Laravel 7.19.0
+Node    12.14.1
+npm     6.13.4
 ```
 
 ## ファイル構造
