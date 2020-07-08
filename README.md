@@ -1,7 +1,7 @@
 # Laravel-env2
 Laravelの開発環境が立ち上げられます。
 
-## version
+## Version
 ```
 PHP     7.4.7
 Laravel 7.19.0
