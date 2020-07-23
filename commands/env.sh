@@ -1,0 +1,12 @@
+#!/bin/bash
+. ../.env
+cd ..
+export APP_NAME=$APP_NAME
+export TZ=$TZ
+export NGINX_PORT=$NGINX_PORT
+export DB_PORT=$DB_PORT
+export DB_NAME=$DB_NAME
+export DB_USER=$DB_USER
+export DB_PASS=$DB_PASS
+export MYSQL_PASSWORD=$MYSQL_PASSWORD
+export MYSQL_DATABASE=$MYSQL_DATABASE

@@ -1,9 +1,3 @@
-# アプリ名
-APP_NAME=application
-APP_GROUP=test
-MYSQL_PASSWORD=secret
-MYSQL_DATABASE=homestead
-
 # docker関連
 build:
 	docker-compose build
@@ -34,19 +28,11 @@ node:
 	docker-compose exec node ash
 
 mysql:
-	docker-compose exec mysql bash -c 'mysql -uroot -p$(MYSQL_PASSWORD) $(MYSQL_DATABASE)'
+	cd commands && bash mysql.sh
 
 # アプリの作成と初期化
 create:
-	docker-compose run -w /var/www/html app laravel new $(APP_NAME) --force
-	docker-compose run app mkdir -p storage/framework/cache/data
-	docker-compose run app mkdir -p storage/framework/sessions
-	docker-compose run app mkdir -p storage/framework/views
-	docker-compose run app chmod 777 -R storage
-	@make up
-	@make restart
-	docker cp ./docker/php/.env $(APP_GROUP)_app:/var/www/html/application/.env
-	docker-compose run app php artisan key:generate	
+	cd commands && bash create.sh
 
 # npm watch
 npm-watch:
