@@ -30,6 +30,11 @@ $ make node
 
 # mysql
 $ make mysql
+
+# コンテナ削除
+$ make delete
 ```
 
-## a
+## 細かい設定方法
+
+`.env`ファイル内にdocker-composeで使う環境変数が用意されています。ご自由に変更してください。
