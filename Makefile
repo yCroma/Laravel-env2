@@ -34,6 +34,14 @@ mysql:
 create:
 	cd commands && bash create.sh
 
+# authのインストール
+auth:
+	docker-compose exec app composer require laravel/ui
+	docker-compose exec app php artisan ui vue --auth
+	docker-compose exec node npm install
+	docker-compose exec node npm run dev
+	docker-compose exec -d node npm run watch-poll
+
 # npm watch
 npm-watch:
 	docker-compose exec -d node npm run watch-poll
