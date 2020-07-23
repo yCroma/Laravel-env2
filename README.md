@@ -9,10 +9,6 @@ Node    12.14.1
 npm     6.13.4
 ```
 
-## 注意点
-- `.env`の`APP_GROUP`を変更する場合、`makefile`内のものを対応させる必要があります
-- `makefile`の`APP_NAME`はハードコーディングされてます。変更したい場合、Nginxのconfファイルも対応させる必要があります
-
 ## 使い方
 
 ```
@@ -36,24 +32,4 @@ $ make node
 $ make mysql
 ```
 
-## ファイル構造
-
-```
-.
-├── .env
-├── Makefile
-├── README.md
-├── docker
-│   ├── nginx
-│   │   ├── Dockerfile
-│   │   ├── conf.d
-│   │   │   └── default.conf
-│   │   └── nginx.conf
-│   └── php
-│       ├── .env
-│       ├── Dockerfile
-│       └── php_fpm
-│           └── php-fpm.d
-│               └── zz-docker.conf
-└── docker-compose.yml
-```
+## a
